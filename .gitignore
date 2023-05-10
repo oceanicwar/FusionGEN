@@ -7,8 +7,10 @@
 !*/cache/.htaccess
 
 application/logs/*
-application/config/database.php
-application/config/fusion.php
+#application/config/database.php
+#application/config/fusion.php
+application/config/*
+install/*
 !application/logs/index.html
 !application/logs/.htaccess
 backups/*.zip
