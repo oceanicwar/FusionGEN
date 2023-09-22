@@ -5,9 +5,9 @@
 			<div class="col-sm-12 col-md-5" social-media>
 				<!-- Social media.Start -->
 				<div class="social-media">
-					<a href="{$social_media['facebook']}" target="_blank" class="social-btn btn-facebook"></a>
-					<a href="{$social_media['twitter']}" target="_blank" class="social-btn btn-twitter"></a>
-					<a href="{$social_media['youtube']}" target="_blank" class="social-btn btn-youtube"></a>
+					<!--	<a href="{$social_media['facebook']}" target="_blank" class="social-btn btn-facebook"></a>	-->
+					<!--	<a href="{$social_media['twitter']}" target="_blank" class="social-btn btn-twitter"></a>	-->
+					<!--	<a href="{$social_media['youtube']}" target="_blank" class="social-btn btn-youtube"></a>	-->
 					<a href="{$social_media['discord']}" target="_blank" class="social-btn btn-discord"></a>
 				</div>
 				<!-- Social media.End -->
