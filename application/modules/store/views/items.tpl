@@ -37,8 +37,8 @@
 			{foreach from=$items item=item}
 				<tr>
 					<td><img style="opacity:1;" src="https://icons.wowdb.com/retail/small/{$item.icon}.jpg" /></td>
-					<td data-bs-toggle="tooltip" data-placement="top" data-html="true" title="{$item.name}"><b class="q{$item.quality}">{character_limiter($item.name, 30)}</b></td>
-					<td data-bs-toggle="tooltip" data-placement="top" data-html="true" title="{$item.description}">{character_limiter($item.description, 20)}</td>
+					<td data-bs-toggle="tooltip" data-placement="top" data-html="true" title="{$item.name}"><b class="q{$item.quality}">{character_limiter($item.name, 999)}</b></td>
+					<td data-bs-toggle="tooltip" data-placement="top" data-html="true" title="{$item.description}">{character_limiter($item.description, 999)}</td>
 					<td>{if array_key_exists("title", $item) && $item.title}{$item.title}{/if}</td>
 					<td>
 						{if $item.vp_price}

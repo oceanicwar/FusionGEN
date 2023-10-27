@@ -105,10 +105,10 @@
 																</div>
 																<div class="col-md-8 mt-1">
 																	<a {if $item.tooltip}href="{$url}item/{$item.realm}/{$item.itemid}" data-realm="{$item.realm}" rel="item={$item.itemid}"{/if} class="item_name q{$item.quality} align-self-center">
-																		{character_limiter($item.name, 20)}
+																		{character_limiter($item.name, 999)}
 																	</a>
 																<p class="text-justify text-truncate mb-0">
-																	{character_limiter($item.description, 25)}
+																	{character_limiter($item.description, 999)}
 																</p>
 																</div>
 																<div class="store_buttons align-items-center align-content-center col-md-3 border-left mt-1">
@@ -152,9 +152,9 @@
 					
 											<img class="item_icon" src="https://icons.wowdb.com/retail/medium/{$item.icon}.jpg" align="absmiddle" {if $item.tooltip}data-realm="{$item.realm}" rel="item={$item.itemid}"{/if}>
 											<a {if $item.tooltip}href="{$url}item/{$item.realm}/{$item.itemid}" data-realm="{$item.realm}" rel="item={$item.itemid}"{/if} class="item_name q{$item.quality}">
-												{character_limiter($item.name, 20)}
+												{character_limiter($item.name, 999)}
 											</a>
-											<br>{character_limiter($item.description, 25)}
+											<br>{character_limiter($item.description, 999)}
 											<div class="clear"></div>
 										</div>
 										{/foreach}
