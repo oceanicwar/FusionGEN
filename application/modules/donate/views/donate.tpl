@@ -5,7 +5,7 @@
 		{include file="../../ucp/views/ucp_navigation.tpl"}
 		
 		<div class="col-lg-8 py-lg-5 pb-5 pb-lg-0">
-			<div class="section-header">Donation <span>Panel</span></div>
+			<div class="section-header">Donations are non refundable so please be sure of your purchase. <span>These funds go towards server hosting costs and cannot be returned.</span></div>
 			<div class="section-body">
 			
 				{if $use_paypal}
