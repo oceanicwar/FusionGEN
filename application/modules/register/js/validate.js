@@ -127,20 +127,24 @@ var Validate = {
 	 * Validate password
 	 */
 	checkPassword: function()
-	{
-		var field_name = "#register_password",
-			field = $(field_name),
-			value = field.val();
+    {
+        var field_name = "#register_password",
+            field = $(field_name),
+            value = field.val();
 
-		if(value.length < 6)
-		{
-			this.invalid(field_name, lang("password_short", "register"));
-		}
-		else
-		{
-			this.valid(field_name);
-		}
-	},
+        if(value.length < 6)
+        {
+            this.invalid(field_name, lang("password_short", "register"));
+        }
+        else if(value.length > 16)
+        {
+            this.invalid(field_name, lang("password_long", "register"));
+        }
+        else
+        {
+            this.valid(field_name);
+        }
+    },
 
 	/**
 	 * Validate password confirm

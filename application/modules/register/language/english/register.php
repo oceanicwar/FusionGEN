@@ -18,6 +18,7 @@ $lang['username_limit'] = "Username may only contain alphabetical and numerical 
 $lang['username_not_available'] = "Username is not available";
 $lang['email_invalid'] = "Email must be a valid email";
 $lang['password_short'] = "Password must be longer than 6 characters";
+$lang['password_long'] = "Password must be 16 characters or shorter";
 $lang['password_match'] = "Passwords don't match";
 $lang['email_not_available'] = "Email is not available";
 $lang['confirm_account'] = "Please confirm your account creation";
