@@ -38,7 +38,10 @@ class Item extends MX_Controller
 
         $data3 = array(
                 "module" => "default",
-                "headline" => "<span style='cursor:pointer;' onClick='window.location=\"" . $this->template->page_url . "armory\"'>" . lang("armory", "item") . "</span> &rarr; " . $itemName,
+                "headline" => breadcrumb(array(
+                                "armory" => lang("armory", "item"),
+                                uri_string() => $itemName
+                            )),
                 "content" => $content
             );
 
@@ -55,9 +58,9 @@ class Item extends MX_Controller
             $cache2 = $this->cache->get("items/display_iconname_" . $id);
 
             if ($cache2 != false) {
-                return "<div class='item'><a></a><img src='https://icons.wowdb.com/retail/large/" . $cache2 . ".jpg' /></div>";
+                return "<div class='item'><a></a><img src='https://icons.wowdb.com/retail/large/" . $cache2 . ".jpg'></div>";
             } else {
-                return "<div class='item'><a></a><img src='https://icons.wowdb.com/retail/large/inv_misc_questionmark.jpg' /></div>";
+                return "<div class='item'><a></a><img src='https://icons.wowdb.com/retail/large/inv_misc_questionmark.jpg'></div>";
             }
         } else {
             return $this->template->loadPage("icon_ajax.tpl", array('id' => $id, 'realm' => $this->realm, 'url' => $this->template->page_url));

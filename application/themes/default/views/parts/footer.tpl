@@ -1,5 +1,5 @@
 <!-- Footer Section.Start -->
-<footer class="footer" footer="">
+<footer class="footer">
   <div class="container-fluid">
     <div class="row row-1">
       <div class="col-sm-12">
@@ -26,8 +26,7 @@
     </div>
     <div class="row row-3">
       <div class="col-sm-12">
-        <div class="footer-copyright">All rights Reserved © <strong>{$serverName}</strong>
-        </div>
+        <div class="footer-copyright">All rights Reserved © <strong>{$serverName}</strong> {date("Y")}</div>
       </div>
     </div>
   </div>

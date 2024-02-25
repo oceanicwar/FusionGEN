@@ -3,9 +3,9 @@
 		Teleport locations (<div style="display:inline;" id="teleport_count">{if !$teleport_locations}0{else}{count($teleport_locations)}{/if}</div>){if hasPermission("canAdd")}<a class="btn btn-primary btn-sm pull-right" href="{$url}teleport/admin/new">Create teleport location</a>{/if}
 	</div>
 
-	<div class="card-body">
+	<div class="card-body table-responsive">
 		{if $teleport_locations}
-		<table class="table table-responsive-md table-hover">
+		<table class="table table-hover">
 		<thead>
 				<tr>
 					<th>Name</th>
@@ -23,12 +23,12 @@
 					<td>{$teleport_location.realmName}</td>
 					<td>
 						{if $teleport_location.vpCost}
-							<img src="{$url}application/images/icons/lightning.png" style="opacity:1;" /> {$teleport_location.vpCost} VP
+							<img src="{$url}application/images/icons/lightning.png" style="opacity:1;"> {$teleport_location.vpCost} VP
 						{elseif $teleport_location.dpCost}
-							<img src="{$url}application/images/icons/coins.png" style="opacity:1;"/>
+							<img src="{$url}application/images/icons/coins.png" style="opacity:1;">
 							{$teleport_location.dpCost} DP
 						{elseif $teleport_location.goldCost}
-						<img src="{$url}application/images/icons/coins.png" style="opacity:1;"/>
+						<img src="{$url}application/images/icons/coins.png" style="opacity:1;">
 							{$teleport_location.goldCost} Gold
 						{else}
 							Free

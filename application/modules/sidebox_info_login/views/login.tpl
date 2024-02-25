@@ -40,7 +40,7 @@
             {/if}
         </div>
     </div>
-    
+
     <div class="form-group text-center mt-4">
     <button class="card-footer nice_button">
         {lang("login_button", "sidebox_info_login")}
@@ -103,7 +103,7 @@ var Auth = {
 				} catch(e) {
 					console.error(e);
 					console.log(data);
-				}				
+				}
 			});
 
 			console.log(postData);
@@ -120,7 +120,7 @@ var Auth = {
 		} else if($(ele).data("show") == false) {
 			$(ele).html('<i class="fas fa-eye"></i>');
 			$(ele).data("show", true);
-			
+
 			$("input#"+ $(ele).data("input-id")).attr("type", "text");
 		}
 		

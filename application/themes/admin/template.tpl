@@ -3,53 +3,54 @@
 	<head>
 		<title>{if $title}{$title}{/if}{$serverName}</title>
 
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
-		<link rel="shortcut icon" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/images/fusiongen.png">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap/css/bootstrap.css">
+		<link rel="icon" type="image/png" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/images/fusiongen.png">
+
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/animate/animate.compat.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/magnific-popup/magnific-popup.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/owl.carousel/assets/owl.carousel.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/owl.carousel/assets/owl.theme.default.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-ui/jquery-ui.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-ui/jquery-ui.theme.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/owl.carousel/assets/owl.carousel.min.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/owl.carousel/assets/owl.theme.default.min.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-ui/jquery-ui.min.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-ui/jquery-ui.theme.min.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap-multiselect/css/bootstrap-multiselect.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/morris/morris.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/sweetalert2/css/sweetalert2-dark.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/select2/css/select2.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/select2/css/select2.min.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/select2-bootstrap-theme/select2-bootstrap.min.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/datatables/media/css/dataTables.bootstrap5.min.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/datatables/extras/tabletools/responsive-2.5.0/css/responsive.bootstrap5.min.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/codemirror/lib/codemirror.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/codemirror/theme/ayu-mirage.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/imagesloader/jquery.imagesloader.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/dropzone/basic.css">
-		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/dropzone/dropzone.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/dropzone/min/basic.min.css">
+		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/dropzone/min/dropzone.min.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/css/theme.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/css/skins/default.css">
 		<link rel="stylesheet" href="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/css/custom.css">
-		{if $extra_css}<link rel="stylesheet" href="{$url}application/{$extra_css}" type="text/css">{/if}
+		{if $extra_css}<link rel="stylesheet" href="{$url}application/{$extra_css}">{/if}
 
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery/jquery.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/modernizr/modernizr.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-browser-mobile/jquery.browser.mobile.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/common/common.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/nanoscroller/nanoscroller.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/magnific-popup/jquery.magnific-popup.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-placeholder/jquery.placeholder.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-ui/jquery-ui.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-ui/jquery-ui.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jqueryui-touch-punch/jquery.ui.touch-punch.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-appear/jquery.appear.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/intercooler-js/intercooler.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/bootstrapv5-multiselect/js/bootstrap-multiselect.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery.easy-pie-chart/jquery.easypiechart.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/flot/jquery.flot.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/flot.tooltip/jquery.flot.tooltip.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/flot/jquery.flot.pie.js"></script>
@@ -57,16 +58,18 @@
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/flot/jquery.flot.resize.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-sparkline/jquery.sparkline.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/raphael/raphael.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/morris/morris.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/gauge/gauge.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/snap.svg/snap.svg.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/morris/morris.min.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/gauge/gauge.min.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/snap.svg/snap.svg-min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/liquid-meter/liquid.meter.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/owl.carousel/owl.carousel.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/sweetalert2/js/sweetalert2.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/select2/js/select2.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/datatables/media/js/jquery.dataTables.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/datatables/media/js/dataTables.bootstrap5.min.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/datatables/extras/tabletools/responsive-2.5.0/js/dataTables.responsive.min.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/datatables/extras/tabletools/responsive-2.5.0/js/responsive.bootstrap5.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/fuelux/js/spinner.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/codemirror/lib/codemirror.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/codemirror/addon/selection/active-line.js"></script>
@@ -76,14 +79,15 @@
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/codemirror/mode/css/css.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/jquery-idletimer/idle-timer.js"></script>
-		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/dropzone/dropzone.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/dropzone/min/dropzone.min.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/theme.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/theme.init.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/theme.admin.extension.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/vendor/imagesloader/jquery.imagesloader-1.0.1.js"></script>
 		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/custom.js"></script>
+		<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/githubinfowidget.js"></script>
 
-		<script type="text/javascript">
+		<script>
 		function getCookie(c_name) {
 			var i, x, y, ARRcookies = document.cookie.split(";");
 
@@ -91,7 +95,7 @@
 				x = ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
 				y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
 				x = x.replace(/^\s+|\s+$/g,"");
-				
+
 				if(x == c_name) {
 					return unescape(y);
 				}
@@ -111,8 +115,8 @@
 	<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/adminMenu.js"></script>
 	<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/mli.js"></script>
 	<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/js/login.js"></script>
-	<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/js/require.js" type="text/javascript"></script>
-	<script type="text/javascript">
+	<script src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/js/require.js"></script>
+	<script>
 		var scripts = [
 			"{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/js/jquery.placeholder.min.js",
 			"{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/js/jquery.transit.min.js",
@@ -136,8 +140,6 @@
 				$(".nano-pane").show();
 			});
 		});
-
-		
 	</script>
 	</head>
 
@@ -161,17 +163,11 @@
 			</div>
 			<!-- start: user box -->
 				<div class="header-right">
-					<ul class="notifications">
-						<a href="{$url}admin/support" class="label label-primary">Support</a>
-					</ul>
-
-					<span class="separator"></span>
-					
 					<ul class="notifications" id="realmstatus">
 						<i class="fas fa-spinner fa-pulse"></i>
 					</ul>
-					
-					<script type="text/javascript">
+
+					<script>
 						var RealmStatus = {
 							statusField: $("#realmstatus"),
 
@@ -183,7 +179,7 @@
 								});
 							}
 						}
-					
+
 						RealmStatus.update();
 					</script>
 
@@ -251,7 +247,7 @@
 			<!-- end: header -->
 		</header>
 	<div class="inner-wrapper">
-		
+
 		<div class="modal fade" id="modalui" tabindex="-1" role="dialog" aria-labelledby="modaluititle" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered" role="document">
 				<div class="modal-content">
@@ -263,7 +259,7 @@
 				</div>
 			</div>
 		</div>
-		
+
 		<!-- Modal -->
 		<div class="modal fade" id="confirm">
 			<div class="modal-dialog modal-dialog-centered">
@@ -359,7 +355,7 @@
 						</ul>
 					</nav>
 				</div>
-				
+
 				<script>
 					if (typeof localStorage !== 'undefined') {
 						if (localStorage.getItem('sidebar-left-position') !== null) {
@@ -370,7 +366,7 @@
 						}
 					}
 				</script>
-				
+
 				<div class="nano-pane" style="opacity: 1; visibility: visible;"><div class="nano-slider" style="height: 412px; transform: translate(0px, 0px);"></div></div>
 			</div>
 		</aside>
@@ -387,7 +383,7 @@
 			<div class="content-body pt-0 pb-3">
 				<div class="row align-items-center">
 					<div class="col-lg-1">
-						<a href="#" onclick="WhatHappenedHere(this)" class="logo">
+						<a href="#" class="logo">
 							<img alt="FusionGen" class="img-fluid" src="{if $cdn_link != false}{$cdn_link}{else}{$url}{/if}application/themes/admin/assets/images/fusiongen.png">
 						</a>
 					</div>
@@ -397,11 +393,9 @@
 					<div class="col-lg-4">
 						<nav id="sub-menu">
 							<ul>
-								<li><i class="fa-solid fa-wifi"></i><a href="https://status.fusiongen.net"> CDN Status</a></li>
-								<li><i class="fa-brands fa-discord"></i><a href="https://discord.gg/5nSt9puU4V"> Discord</a></li>
-								<li><i class="fa-solid fa-book"></i><a href="https://docs.fusiongen.net/"> Docs</a></li>
-								<li><i class="fa-brands fa-github"></i><a href="https://github.com/FusionGen/FusionGEN"> Github</a></li>
-								<script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script><script type='text/javascript'>kofiwidget2.init('Support Us', '#29abe0', 'M4M0BFX1Y');kofiwidget2.draw();</script> 
+								<li><a target="_blank" href="https://discord.gg/5nSt9puU4V"><i class="fa-brands fa-discord"></i> Discord</a></li>
+								<li><a target="_blank" href="https://github.com/FusionGen/FusionGEN"><i class="fa-brands fa-github"></i> Github</a></li>
+								<li><a target="_blank" href="https://ko-fi.com/fusiongen"><i class="fa-solid fa-mug-hot"></i> Support Us</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -410,23 +404,6 @@
 		</div>
 	</footer>
 	<script>
-		function WhatHappenedHere(btn) {
-			Swal.fire({
-				width: 0,
-				padding: '0',
-				color: '#716add',
-				showCancelButton: false,
-				showConfirmButton: false,
-				backdrop: `
-					rgba(0,0,123,0.4)
-					url("https://sweetalert2.github.io/images/nyan-cat.gif")
-					center
-					no-repeat
-					`
-			})
-		};
-	</script>
-	<script type="text/javascript">
 	var Notify = {
 		notifyField: $("#content"),
 		countField: $("#count"),
@@ -445,7 +422,7 @@
 				Notify.count2Field.html(data);
 			});
 		},
-		
+
 		markRead: function(id, element)
 		{
 			element = $(element);
@@ -454,13 +431,13 @@
 			$("#count").html(parseInt($("#count").html()) - 1);
 			$("#count2").html(parseInt($("#count2").html()) - 1);
 		},
-		
+
 		markAllRead: function()
 		{
 			$.get(Config.URL + "admin/markReadNotification/" + false + "/" + true)
 		}
 	}
-	
+
 	Notify.update();
 	setInterval(Notify.update, 10000);
 	</script>

@@ -1,10 +1,10 @@
 <section id="update_status">
     <div style="text-align:center;margin-bottom:10px;">
-        <i class="fas fa-spinner fa-pulse"></i>
+        <i class="fas fa-spinner fa-pulse fa-xl"></i>
     </div>
 </section>
 
-<script type="text/javascript">
+<script>
     var Status = {
         statusField: $("#update_status"),
 

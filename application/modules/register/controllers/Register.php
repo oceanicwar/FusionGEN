@@ -40,7 +40,7 @@ class Register extends MX_Controller
         $this->form_validation->set_rules('register_password', 'password', 'trim|required|min_length[6]|max_length[16]|xss_clean');
         $this->form_validation->set_rules('register_password_confirm', 'password confirmation', 'trim|required|matches[register_password]|xss_clean');
 
-        $this->form_validation->set_error_delimiters('<img src="' . $this->template->page_url . 'application/images/icons/exclamation.png" data-tip="', '" />');
+        $this->form_validation->set_error_delimiters('<img src="' . $this->template->page_url . 'application/images/icons/exclamation.png" data-tip="', '">');
 
         require_once('application/libraries/Captcha.php');
 

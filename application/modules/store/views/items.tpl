@@ -53,7 +53,7 @@
 						{if hasPermission("canEditItems")}
 							<a class="btn btn-primary btn-sm" href="{$url}store/admin_items/edit/{$item.id}">Edit</a>
 						{/if}
-			
+
 						{if hasPermission("canRemoveItems")}
 							<a class="btn btn-primary btn-sm" href="javascript:void(0)" onClick="Items.remove({$item.id}, this)">Delete</a>
 						{/if}
@@ -87,7 +87,7 @@
 						{if hasPermission("canEditGroups")}
 							<a class="btn btn-primary btn-sm" href="{$url}store/admin_items/edit_group/{$group.id}">Edit</a>
 						{/if}
-			
+
 						{if hasPermission("canRemoveGroups")}
 							<a class="btn btn-primary btn-sm" href="javascript:void(0)" onClick="Items.removeGroup({$group.id}, this, true)">Delete</a>
 						{/if}
@@ -103,7 +103,6 @@
 
 <script>
     $(document).ready(function () {
-   
         $("#ItemSeachInput").on("keyup", function () {
             var value = $(this).val().toLowerCase();     
             $("#ItemTableResult tr").filter(function () {

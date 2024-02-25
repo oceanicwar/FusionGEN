@@ -1,24 +1,22 @@
 <!-- Character Top.Start -->
 <div class="row top-bar">
 	<div class="col-avatar">
-		<div class="avatar">
-			<img src="{$url}application/images/avatars/{$avatar}.gif"/>
-		</div>
+		<img src="{$url}application/images/avatars/{$avatar}.gif">
 	</div>
 	<div class="col-9 col-md-10 ps-4">
 		<div class="d-flex h-100 align-items-center">
 			<span class="h1 color-c{$class}">{$name}</span>
 			<div class="border-start border-2 ms-3 ps-3">
-				<div class=""> {$raceName} {$className}</div>
+				<div class="">{$raceName} {$className}</div>
 				<div class="">{if $guildName}<a href="{$url}guild/{$realmId}/{$guild}">❮{$guildName}❯</a>{/if} {$realmName}</div>
 			</div>
 		</div>
 	</div>
 </div>
 <!-- Character Top.End -->
-<hr class="my-5" />
+<hr class="my-5">
 <!-- Character Main.Start -->
-<div class="row {if $faction == 1}bg-faction alliance{else if $faction == 2}bg-faction horde{/if}">
+<div class="row {if $faction == 1}bg-faction alliance{elseif $faction == 2}bg-faction horde{/if}">
 	<div class="col-items">
 		<div class="item"><a></a>{$items.head}</div>
 		<div class="item"><a></a>{$items.neck}</div>
@@ -29,16 +27,16 @@
 		<div class="item"><a></a>{$items.tabard}</div>
 		<div class="item"><a></a>{$items.wrists}</div>
 	</div>
-	
+
 	<div class="col-main text-center pt-5">
 		<div class="char-avatar d-inline-block">
-			<i class="avatar shadow" style="background-image:url('{$url}/application/images/renderer/face/{$race}_{$gender}.png');"></i>
+			<i class="avatar shadow" style="background-image:url('{$url}application/images/renderer/face/{$race}_{$gender}.png');"></i>
 			<div class="char-level bg-dark fw-bold shadow">{$level}</div>
 		</div>
 		<div class="avatar-text h1 my-3">{$name}</div>
 		
 	</div>
-	
+
 	<div class="col-items">
 		<div class="item"><a></a>{$items.hands}</div>
 		<div class="item"><a></a>{$items.waist}</div>
@@ -57,7 +55,7 @@
 	<div class="item"><a></a>{$items.ranged}</div>
 </div>
 <!-- Character Main.End -->
-<hr class="my-5" />
+<hr class="my-5">
 <!-- Character Bars.Start -->
 <div class="row my-5">
 	<div class="col-6">
@@ -69,11 +67,21 @@
 					<span class="text-upper h4">{$stats.maxhealth}</span>
 					</div>
 					<div class="progress" style="height: 5px;">
-						<div class="progress-bar  bg-health" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+						<div class="progress-bar bg-health" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 			{/if}
-		{/if}		
+		{else}
+			<div id="health" class="">
+				<div class="d-flex justify-content-between">
+				<span class="text-upper h4">Health</span>
+				<span class="text-upper h4">{lang("unknown", "character")}</span>
+				</div>
+				<div class="progress" style="height: 5px;">
+					<div class="progress-bar bg-health" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+				</div>
+			</div>
+		{/if}
 	</div>
 	<div class="col-6">
 		{if isset($secondBarValue)}
@@ -84,7 +92,7 @@
 					<span class="text-upper h4">{$secondBarValue}</span>
 					</div>
 					<div class="progress" style="height: 5px;">
-						<div class="progress-bar  bg-{$secondBar}" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+						<div class="progress-bar bg-{$secondBar}" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
 					</div>
 				</div>
 			{/if}
@@ -104,6 +112,10 @@
 					<td class="text-end">{if isset($stats.strength)}{$stats.strength}{else}{lang("unknown", "character")}{/if}</td>
 				</tr>
 				<tr>
+					<td>{lang("agi", "character")}</td>
+					<td class="text-end">{if isset($stats.agility)}{$stats.agility}{else}{lang("unknown", "character")}{/if}</td>
+				</tr>
+				<tr>
 					<td>{lang("sta", "character")}</td>
 					<td class="text-end">{if isset($stats.stamina)}{$stats.stamina}{else}{lang("unknown", "character")}{/if}</td>
 				</tr>
@@ -111,14 +123,14 @@
 					<td>{lang("int", "character")}</td>
 					<td class="text-end">{if isset($stats.intellect)}{$stats.intellect}{else}{lang("unknown", "character")}{/if}</td>
 				</tr>
-				
+
 				{if $stats && array_key_exists("spellPower", $stats)}
 				<tr>
 					<td>{lang("sp", "character")}</td>
 					<td class="text-end">{if isset($stats.spellPower)}{$stats.spellPower}{else}{lang("unknown", "character")}{/if}</td>
 				</tr>
 				{/if}
-				
+
 				{if $stats && array_key_exists("attackPower", $stats)}
 				<tr>
 					<td>{lang("ap", "character")}</td>
@@ -126,7 +138,7 @@
 				</tr>
 				{/if}
 			</table>
-			
+
 			<table class="table table-striped table-hover">
 				{if $stats && array_key_exists("resilience", $stats)}
 				<tr>
@@ -134,7 +146,7 @@
 					<td class="text-end">{if isset($stats.resilience)}{$stats.resilience}{else}{lang("unknown", "character")}{/if}</td>
 				</tr>
 				{/if}
-				
+
 				<tr>
 					<td>{lang("armor", "character")}</td>
 					<td class="text-end">{if isset($stats.armor)}{$stats.armor}{else}{lang("unknown", "character")}{/if}</td>
@@ -150,28 +162,28 @@
 				<tr>
 					<td>{lang("parry", "character")}</td>
 					<td class="text-end">{if isset($stats.parryPct)}{$stats.parryPct}%{else}{lang("unknown", "character")}{/if}</td>
-				</tr>				
+				</tr>
 			</table>
-			
+
 			<table class="table table-striped table-hover">
 				<tr>
 					<td>{lang("crit", "character")}</td>
 					<td class="text-end">{if isset($stats.critPct)}{$stats.critPct}%{else}{lang("unknown", "character")}{/if}</td>
-				</tr>		
+				</tr>
 				<tr>
 					<td>{lang("ranged_crit", "character")}</td>
 					<td class="text-end">{if isset($stats.rangedCritPct)}{$stats.rangedCritPct}%{else}{lang("unknown", "character")}{/if}</td>
-				</tr>			
+				</tr>
 				<tr>
 					<td>{lang("spell_crit", "character")}</td>
 					<td class="text-end">{if isset($stats.spellCritPct)}{$stats.spellCritPct}%{else}{lang("unknown", "character")}{/if}</td>
-				</tr>		
-				
+				</tr>
+
 				{if $stats && array_key_exists("spirit", $stats)}
 				<tr>
 					<td>{lang("spirit", "character")}</td>
 					<td class="text-end">{if isset($stats.spirit)}{$stats.spirit}{else}{lang("unknown", "character")}{/if}</td>
-				</tr>			
+				</tr>
 				{/if}
 			</table>
 		</div>
@@ -186,14 +198,14 @@
 					<td class="text-end">{if isset($pvp.kills)}{$pvp.kills}{else}{lang("unknown", "character")}{/if}</td>
 				</tr>
 				{/if}
-				
+
 				{if $pvp.honor !== false}
 				<tr>
 					<td>{lang("honor", "character")}</td>
 					<td class="text-end">{if isset($pvp.honor)}{$pvp.honor}{else}{lang("unknown", "character")}{/if}</td>
 				</tr>
 				{/if}
-				
+
 				{if $pvp.arena !== false}
 				<tr>
 					<td>{lang("arena", "character")}</td>
@@ -208,6 +220,6 @@
 
 <!-- Load wowhead tooltip -->
 {if !$fcms_tooltip}
-<script type="text/javascript" src="https://static.wowhead.com/widgets/power.js"></script>
+<script src="https://wow.zamimg.com/js/tooltips.js"></script>
 <script>var wowhead_tooltips = { "colorlinks": false, "iconizelinks": false, "renamelinks": false }</script>
 {/if}

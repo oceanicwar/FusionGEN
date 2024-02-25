@@ -7,7 +7,7 @@
 
 	/* Fonts */
 	--font-family-primary: 'Cambria', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--font-family-secondary: /*'CapitalisTypOasis',*/ 'ChanticleerRoman', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--font-family-secondary: /*'CapitalisTypOasis',*/ 'Cambria', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--font-family-tertiary: 'Assassin$', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--font-family-quaternary: 'Calibri', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
@@ -77,9 +77,9 @@ body {
 /* Global: Hyperlink
 /*---------------------------------------------------------------*/
 a {
-	color: #8ebcda;
+	color: #8ebcda !important;
 	text-decoration: none !important;
-} a:hover {color: #9dd0f2;}
+} a:hover {color: #9dd0f2 !important;}
 
 /* Global: Image
 /*---------------------------------------------------------------*/
@@ -175,5 +175,5 @@ img {
     opacity:1
 }
 .navbar-side .navbar-nav .nav-item .nav-link span{
-    vertical-align:sub
+    vertical-align:baseline
 }

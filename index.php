@@ -32,7 +32,7 @@ if(file_exists("install") && !file_exists("install/.lock"))
  *---------------------------------------------------------------
  *
  * Different environments will require different levels of error reporting.
- * By default development will show errors but testing and live will hide them.
+ * By default development will show errors but testing and production will hide them.
  */
 
 if (defined('ENVIRONMENT'))
@@ -43,14 +43,17 @@ if (defined('ENVIRONMENT'))
 			error_reporting(E_ALL & ~E_DEPRECATED);
 			ini_set('display_errors', '1');
 		break;
-	
+
 		case 'testing':
 		case 'production':
-			error_reporting(0);
+			error_reporting(E_ALL & ~E_DEPRECATED & ~E_STRICT);
+			ini_set('display_errors', '0');
 		break;
 
 		default:
-			exit('The application environment is not set correctly.');
+			header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+			echo 'The application environment is not set correctly.';
+			exit(1); // EXIT_ERROR
 	}
 }
 
@@ -151,18 +154,26 @@ date_default_timezone_set("Europe/Amsterdam");
 		chdir(dirname(__FILE__));
 	}
 
-	if (realpath($system_path) !== FALSE)
+	if (($_temp = realpath($system_path)) !== FALSE)
 	{
-		$system_path = realpath($system_path).'/';
+		$system_path = $_temp.DIRECTORY_SEPARATOR;
 	}
-
-	// ensure there's a trailing slash
-	$system_path = rtrim($system_path, '/').'/';
+	else
+	{
+		// Ensure there's a trailing slash
+		$system_path = strtr(
+			rtrim($system_path, '/\\'),
+			'/\\',
+			DIRECTORY_SEPARATOR.DIRECTORY_SEPARATOR
+		).DIRECTORY_SEPARATOR;
+	}
 
 	// Is the system path correct?
 	if ( ! is_dir($system_path))
 	{
-		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+		header('HTTP/1.1 503 Service Unavailable.', TRUE, 503);
+		echo 'Your system folder path does not appear to be set correctly. Please open the following file and correct this: '.pathinfo(__FILE__, PATHINFO_BASENAME);
+		exit(3); // EXIT_CONFIG
 	}
 
 /*
@@ -237,8 +248,8 @@ date_default_timezone_set("Europe/Amsterdam");
 		exit(3); // EXIT_CONFIG
 	}
 
-	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);	
-	
+	define('VIEWPATH', $view_folder.DIRECTORY_SEPARATOR);
+
 /*
  * --------------------------------------------------------------------
  * LOAD THE BOOTSTRAP FILE
