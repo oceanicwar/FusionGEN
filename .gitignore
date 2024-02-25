@@ -7,8 +7,8 @@
 !*/cache/.htaccess
 
 application/logs/*
-application/config/*
-application/modules/*/config/*
+application/config/*.php
+application/modules/*/config/*.php
 install/*
 !application/logs/index.html
 !application/logs/.htaccess
